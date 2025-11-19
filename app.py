@@ -42,7 +42,7 @@ if st.button("회사 이름 생성"):
     )
 
     # 응답에서 회사 이름 후보 리스트 출력
-    company_names = response.choices[0].message["content"]
+    company_names = response.choices[0].message.content
     
     st.write("생성된 회사 이름 후보 목록:")
     st.text_area("회사 이름 후보", company_names, height=300)
