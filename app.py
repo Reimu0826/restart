@@ -28,7 +28,7 @@ if st.button("회사 이름 생성"):
         what_phrase = "친환경사업을 주업으로 하는"
 
     # 프롬프트 만들기
-    prompt = f"""{what_phrase} 회사의 이름을 {want_phrase} 반드시 {wordnumber}+1글자로 출력.
+    prompt = f"""{what_phrase} 회사의 이름을 {want_phrase} 반드시 {wordnumber}글자로 출력.
 이름은 독창적이며 한눈에 봤을때 무슨 회사인지 알기 쉽고 기억하기 쉬워야 함.
 {many}개의 후보를 번호를 붙여서 리스트 형태로 출력."""
 
