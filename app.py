@@ -1,8 +1,8 @@
 import streamlit as st
-import openai
+from openai import OpenAI
 
-# OpenAI API 키 설정 (실제 API 키를 사용해야 합니다)
-openai.api_key = "your-openai-api-key"
+# --- API KEY ---
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Streamlit 앱 제목
 st.title("회사 이름 생성기")
@@ -33,7 +33,7 @@ if st.button("회사 이름 생성"):
 {many}개의 후보를 번호를 붙여서 리스트 형태로 출력."""
 
     # OpenAI GPT-4 응답 받기
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-4.1",
         messages=[
             {"role": "system", "content": "번호를 붙여 목록 형태로만 답변, 다른 설명 금지."},
