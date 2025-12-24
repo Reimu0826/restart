@@ -10,7 +10,7 @@ st.title("회사 이름 생성기")
 # 사용자 입력 받기
 what = st.text_input("무엇을 하는 회사인가요?(빈칸일시 친환경사업을 주업으로 하는 회사이름을 추천해드려요)", "")
 want = st.text_input("회사 이름에 반드시 들어가야 하는 단어가 있나요?", "")
-wordnumber = st.number_input("몇 글자로 제한할까요?", min_value=1, step=1)
+wordnumber = st.number_input("몇 글자이내로 생성할까요?", min_value=1, step=1)
 many = st.number_input("몇 개의 후보 생성을 원하시나요?", min_value=1, step=1)
 
 # 버튼 클릭 시 이름 생성 로직 실행
